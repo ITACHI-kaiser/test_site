@@ -1,0 +1,933 @@
+@charset "UTF-8";
+body {
+  background-color: #222;
+  font-family: serif;
+}
+
+.header-inner {
+  width: 100%;
+  position: relative;
+}
+.header-inner .header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+.header-inner .header-nav .header-list {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mv {
+  width: 90%;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80vh;
+  position: relative;
+}
+.mv-ttl-area {
+  width: 15%;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+}
+.mv-ttl-area .mv-ttl {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 100px;
+  vertical-align: middle;
+}
+.mv-ttl-area .bgextend {
+  -webkit-animation-name: bgextendAnimeBase;
+          animation-name: bgextendAnimeBase;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+@-webkit-keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mv-ttl-area .bgappear {
+  -webkit-animation-name: bgextendAnimeSecond;
+          animation-name: bgextendAnimeSecond;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+@-webkit-keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mv-ttl-area .bgUDextend::before {
+  -webkit-animation-name: bgUDextendAnime;
+          animation-name: bgUDextendAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+@-webkit-keyframes bgUDextendAnime {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  50% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50.001% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  100% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+@keyframes bgUDextendAnime {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  50% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50.001% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  100% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+.mv-ttl-area .bgDUextend::before {
+  -webkit-animation-name: bgDUextendAnime;
+          animation-name: bgDUextendAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+@-webkit-keyframes bgDUextendAnime {
+  0% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  50% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50.001% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+@keyframes bgDUextendAnime {
+  0% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  50% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50.001% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+.mv-slider {
+  width: 80%;
+  position: relative;
+}
+.mv-slider .mv-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .mv-slider {
+    width: 100%;
+  }
+
+  .mv-ttl-area {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 25px;
+    z-index: 2;
+  }
+}
+.luxy-area {
+  width: 80%;
+  margin: 200px auto 100px auto;
+  height: 1500px;
+}
+.luxy-area-box {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.luxy-area-box .box-left, .luxy-area-box .box-right {
+  width: 50%;
+}
+.luxy-area-box h2:nth-child(1) {
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: -10%;
+  left: 10%;
+}
+.luxy-area-box h2:nth-child(3) {
+  position: absolute;
+  top: -10%;
+  left: -50%;
+}
+.luxy-area-box h2 {
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+}
+.luxy-area-box .luxy-txt {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 350px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  padding: 20px 15px;
+  border: 2px solid #3d0f0f;
+  z-index: 10;
+}
+.luxy-area-box .luxy-txt-2 {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  line-height: 1.5;
+  background-color: #fff;
+  padding: 20px 15px;
+  border: 2px solid #3d0f0f;
+}
+.luxy-area-box .luxy-ttl {
+  position: absolute;
+  top: 0;
+  left: -60%;
+}
+.luxy-area-box .luxy-txt-3 {
+  position: absolute;
+  top: 80%;
+  left: -80%;
+  width: 450px;
+  line-height: 1.5;
+  background-color: #fff;
+  padding: 20px 15px;
+  border: 2px solid #3d0f0f;
+}
+.luxy-area-box img {
+  -webkit-box-shadow: 0 0 40px lightgray;
+          box-shadow: 0 0 40px lightgray;
+}
+.luxy-area-box .mikkyo-img {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.luxy-area-box + .luxy-area-box {
+  margin-top: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .luxy-area {
+    width: 100%;
+    margin: 100px auto 100px auto;
+    height: 800px;
+  }
+
+  .box-left img, .box-right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .box-left {
+    position: relative;
+  }
+
+  .mikkyo-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .luxy-txt {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .luxy-txt-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.wrapper {
+  max-width: 800px;
+  margin: 2000px auto;
+}
+
+.tab {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tab li a {
+  text-align: center;
+  width: 100px;
+  display: block;
+  background: #ddd;
+  margin: 0 2px;
+  padding: 10px 20px;
+}
+
+.tab li.active a {
+  background: #fff;
+}
+
+.area {
+  display: none;
+  /*はじめは非表示*/
+  opacity: 0;
+  /*透過0*/
+  background: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+.area h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 2;
+  position: relative;
+}
+
+.area-ttl {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 2;
+  position: relative;
+}
+
+.area-ttl::before {
+  position: absolute;
+  top: -10%;
+  left: 5px;
+  color: #666;
+  font-size: 5px;
+}
+
+.nyorai::before {
+  content: "にょらい";
+}
+
+.bosatu::before {
+  content: "ぼさつ";
+}
+
+.myouo::before {
+  content: "みょうおう";
+}
+
+.tennbu::before {
+  content: "てんぶ";
+}
+
+.area p {
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.area ul {
+  padding: 20px 0;
+}
+
+.area:nth-child(2) {
+  background-color: #e4f5c4;
+  position: relative;
+}
+
+.area:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: url(../img/仏教系/如来.jpg) center/cover;
+}
+
+.area:nth-child(3) {
+  background-color: #cbcbf1;
+  position: relative;
+}
+
+.area:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: url(../img/仏教系/菩薩.png) center/cover;
+}
+
+.area:nth-child(4) {
+  background: #e49999;
+  position: relative;
+}
+
+.area:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: url(../img/仏教系/明王.jpg) center/cover;
+}
+
+.area:nth-child(5) {
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.area:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: url(../img/仏教系/天部.jpg) center/cover;
+}
+
+.area.is-active {
+  display: block;
+  /*表示*/
+  -webkit-animation-name: displayAnime;
+          animation-name: displayAnime;
+  /*ふわっと表示させるためのアニメーション*/
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.blog .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10% 0;
+  background-color: #888;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 0 30px white;
+          box-shadow: 0 0 30px white;
+}
+.blog .lineTrigger {
+  position: relative;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 15px 0;
+  margin: 0 auto 150px auto;
+  color: cyan;
+}
+.blog .lineTrigger.lineanime {
+  -webkit-animation-name: lineAnimeBase;
+          animation-name: lineAnimeBase;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.blog-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
+}
+.blog-flex .box {
+  width: 200px;
+  height: 200px;
+  margin: 0 20px 20px 20px;
+  background-color: #fff;
+  position: relative;
+  opacity: 0;
+}
+.blog-flex .box img {
+  width: 200px;
+  height: 200px;
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.blog-flex .box a:hover img {
+  -webkit-filter: sepia(0);
+          filter: sepia(0);
+}
+.blog-flex .box:hover {
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.blog-flex .box.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.blog-flex .box span.mask {
+  position: relative;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+.blog-flex .box span.mask::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  background: #e4f5c4;
+  width: 100%;
+  height: 30%;
+}
+.blog-flex .box:hover span.mask::before {
+  opacity: 0.5;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.blog-flex .box span.cap {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 3;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  line-height: 1.5;
+}
+.blog-flex .box:hover span.cap {
+  opacity: 1;
+}
+
+@-webkit-keyframes lineAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lineAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.lineTrigger::before,
+.lineTrigger::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+
+.lineTrigger::before {
+  top: 0;
+  left: 0;
+}
+
+.lineTrigger.lineanime::before {
+  -webkit-animation: lineAnime 2s linear 0s forwards;
+          animation: lineAnime 2s linear 0s forwards;
+}
+
+.line::before {
+  top: 0;
+  right: 0;
+}
+
+.lineTrigger.lineanime .line2::before {
+  -webkit-animation: lineAnime2 2s linear 0.5s forwards;
+          animation: lineAnime2 2s linear 0.5s forwards;
+}
+
+.lineTrigger::after {
+  bottom: 0;
+  left: 0;
+}
+
+.lineTrigger.lineanime .line2::after {
+  -webkit-animation: lineAnime2 2s linear 1.5s forwards;
+          animation: lineAnime2 2s linear 1.5s forwards;
+}
+
+@-webkit-keyframes lineAnime {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes lineAnime {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes lineAnime2 {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes lineAnime2 {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.lineTrigger.lineanime .lineinappear {
+  -webkit-animation: lineInnerAnime 2s linear 2s forwards;
+          animation: lineInnerAnime 2s linear 2s forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes lineInnerAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lineInnerAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.delay-time02 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-time03 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-time04 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-time05 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-time06 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-time07 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-time08 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    width: 100%;
+  }
+
+  .blog-flex {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .box {
+    display: block;
+    width: 80% !important;
+    margin: 20px auto !important;
+    height: 300px !important;
+  }
+
+  .box img {
+    width: 100% !important;
+    height: 300px !important;
+  }
+}
+.footer {
+  margin-top: 150px;
+  border-top: 2px solid white;
+}
+.footer-wrapper {
+  width: 80%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 50px auto;
+}
+.footer-area {
+  padding: 5% 2%;
+  width: 100%;
+  height: 100%;
+  color: snow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer-area-left {
+  width: 40%;
+  letter-spacing: 7px;
+}
+.footer-area-left h2 {
+  padding: 20px 10px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 60px;
+}
+.footer-area-left p {
+  padding: 10px;
+  letter-spacing: 3px;
+}
+.footer-area-right {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+.footer-area-right .footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer-area-right .footer-list li {
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=style.css.map */
